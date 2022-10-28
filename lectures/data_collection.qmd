@@ -1,0 +1,165 @@
+---
+title: "Data creation"
+subtitle: "Collection, spreadsheet design and digitizing"
+author: "Aud Halbritter and Joe Chipperfield"
+format:
+  revealjs: 
+    theme: simple
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    #css: styles.css
+---
+
+## Introduction
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+Data creation is the systematic **collection of data** for a specific purpose and **digitizing** the data for downstream processing in statistical analysis or sharing with or reuse by others.
+
+:::
+
+::: {.column width="40%"}
+![](pics/cycle.png){.absolute top="50" left="600" width="400" height="400"}
+:::
+
+::::
+
+## What is the plan?
+
+| Time  | Task  |
+|:---|:---|
+| 20 min  | Design method  |
+| 10 min  | Discuss your decisions  |
+| 30 min  | Go outside and collect data  |
+| 30 min  | Discussion  |
+
+
+
+
+# Data collection
+
+## Exersice: design method (20 min)
+
+- Make groups of 4-5 students.
+
+- Decide what you what **data you want to collect**.
+(e.g. snow depth, length of icicles)
+
+- Decide on a **method** to collect the data (e.g. paper, phone).
+
+- **Design a spreadsheet/protocol**. Think about what is the relevant information that you need.
+
+Make notes on the decisions you have taken.
+
+Reflect on if you would use a different method if you had the means.
+
+
+## Discussion: collect data (10 min)
+
+- What decisions did you make?
+- How would you improve the data collection if you could?
+
+
+## Exersice: collect your data (30 min)
+
+Go outside and collect your data.
+
+It is not important to collect as many data points as possible.
+
+**Reflect** and make notes if the method you used was suitable for the data you collected.
+
+
+
+## Key things during data collection (BES guide)
+
+- Logistical issues
+
+- Calibration of instruments
+
+- Multiple measurements/observations/samples
+
+- Template/protocol for sampling (multiple data collectors, over time)
+
+- Take notes during data collection
+
+- Collect meta data that could be useful for wider usage
+
+
+
+
+# Digitizing and process data
+
+
+## Exercise: digitizing (5 min)
+
+Discuss how you would digitize the data and what to consider during that process.
+
+
+## Disscusion: the whole process (25 min)
+
+- What was easy
+- 
+
+
+
+## Data validation tools
+
+Use data validation tools for data entry.
+
+- format cells (dates)
+
+- set ranges
+
+- drop down menu
+
+
+
+## Be consistent
+
+- file names
+
+- variable names
+
+- factor levels
+
+- missing data
+
+- notes
+
+
+## Careful with dates
+
+
+![](pics/iso_8601.png){width="200"}
+
+
+## Data workflow
+
+- Digitize data
+
+- Keep raw data raw
+
+- No calculations in raw data
+
+- code-based data cleaning
+
+- Clean data
+
+- document your data (data about your data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
