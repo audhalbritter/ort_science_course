@@ -1,0 +1,34 @@
+---
+R:
+  recommended: 4.2.1
+  minimum: 4.1.0
+packages:
+  tidyverse:
+    recommended: 1.3.1
+  here: NA
+  quarto: NA
+  usethis: NA
+  rgbif: NA
+  LivingNorwayR: NA
+rstudio:
+  recommended: 2022.07.1
+  options:
+    save_workspace:
+      value: never
+      message: Menu tools > Global options > General
+    load_workspace:
+      value: FALSE
+      message: Set load workspace to FALSE to improve reproducibility. Menu tools > Global options > General
+    rainbow_parentheses:
+      value: TRUE
+      message: Rainbow parentheses make it easier to spot missing parentheses. Menu tools > Global options > Code > Display
+    soft_wrap_r_files:
+      value: TRUE
+      message: Soft wrap files so you don't need to scroll sideways. Menu tools > Global options > Code > Editing
+    insert_native_pipe_operator:
+      value: TRUE
+      message: Use the native pipe operator '|>'. Menu tools > Global options > Code > Editing
+quarto:
+  recommended: 1.2.198
+git: NA
+---
