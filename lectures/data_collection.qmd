@@ -17,7 +17,7 @@ format:
 
 ::: {.column width="60%"}
 
-Data creation is the systematic **collection of data** for a specific purpose and **digitizing** the data for downstream processing in statistical analysis or sharing with or reuse by others.
+**Data creation** is the systematic **collection of data** for a specific purpose and **digitizing** the data for downstream processing in statistical analysis or sharing with or reuse by others.
 
 :::
 
@@ -31,30 +31,38 @@ Data creation is the systematic **collection of data** for a specific purpose an
 
 | Time  | Task  |
 |:---|:---|
-| 20 min  | Design method  |
+| 5 min  | Introduction  |
+| 15 min  | Design method  |
 | 10 min  | Discuss your decisions  |
 | 30 min  | Go outside and collect data  |
-| 30 min  | Discussion  |
+| 30 min  | Discussion on data collection and digitizing  |
 
 
 
 
 # Data collection
 
-## Exersice: design method (20 min)
+## Data collection methods
+
+- automatic data collection (e.g. weather station, LiCor)
+
+- manual data collection (samples, measure, count)
+
+![](pics/spreadsheets.jpg){width="200"}
+
+
+## Exercise: design method (15 min)
 
 - Make groups of 4-5 students.
 
-- Decide what you what **data you want to collect**.
-(e.g. snow depth, length of icicles)
+- Decide what **data you want to collect**.
+(e.g. snow depth, length of icicles, plant height)
 
 - Decide on a **method** to collect the data (e.g. paper, phone).
 
 - **Design a spreadsheet/protocol**. Think about what is the relevant information that you need.
 
-Make notes on the decisions you have taken.
-
-Reflect on if you would use a different method if you had the means.
+**Reflect** on  the decisions you made and if you would change anything if you had the means.
 
 
 ## Discussion: collect data (10 min)
@@ -63,17 +71,24 @@ Reflect on if you would use a different method if you had the means.
 - How would you improve the data collection if you could?
 
 
-## Exersice: collect your data (30 min)
+## Exercise: collect your data (30 min)
 
-Go outside and collect your data.
+- Go outside and collect your data. It is not important to collect as many data points as possible.
 
-It is not important to collect as many data points as possible.
-
-**Reflect** and make notes if the method you used was suitable for the data you collected.
+- **Reflect** if the method you used was suitable for the data you collected.
 
 
+## Discussion: data collection (10 min)
 
-## Key things during data collection (BES guide)
+- How did it go?
+
+- was the method appropriate?
+
+- Did you miss any information?
+
+
+
+## Key things during data collection
 
 - Logistical issues
 
@@ -87,23 +102,21 @@ It is not important to collect as many data points as possible.
 
 - Collect meta data that could be useful for wider usage
 
+Source: britishecologicalsociety.org/publications/guides-to
 
 
 
 # Digitizing and process data
 
+## Disscusion: digitizing (15 min)
 
-## Exercise: digitizing (5 min)
+- What would be your strategy for digitize the data?
 
-Discuss how you would digitize the data and what to consider during that process.
-
-
-## Disscusion: the whole process (25 min)
-
-- What was easy
-- 
+- What could be problems?
 
 
+
+<!-- Here are some slides at the end if there is time -->
 
 ## Data validation tools
 
@@ -144,18 +157,21 @@ Use data validation tools for data entry.
 
 - No calculations in raw data
 
-- code-based data cleaning
+- Code-based data cleaning
 
 - Clean data
 
-- document your data (data about your data)
+- Document your data (data about your data)
 
 
 
+## Literature
 
+- BES guide for [Data management](https://www.britishecologicalsociety.org/wp-content/uploads/2019/06/BES-Guide-Data-Management-2019.pdf?utm_source=web&utm_medium=web&utm_campaign=better_science)
 
+- BioStats book [Data collection](https://biostats-r.github.io/biostats/data_collection/)
 
-
+- Broman, Karl W, and Kara H Woo. 2018. “Data Organization in Spreadsheets.” The American Statistician 72 (1): 2–10.
 
 
 
