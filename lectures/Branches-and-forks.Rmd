@@ -1,0 +1,966 @@
+---
+title: "Coding and collaborating with branches and forks"
+author: "Aud H. Halbritter and Ondřej  Mottl"
+date: "14/10/2021"
+output:
+  xaringan::moon_reader:
+    css: [default, metropolis, assets/css/footer.css, metropolis-fonts, assets/css/metropolis-ak_dc.css, assets/css/style.css]
+    lib_dir: libs
+    nature:
+      beforeInit: "https://platform.twitter.com/widgets.js"
+      highlightStyle: github
+      titleSlideClass: [middle, left]
+      highlightLines: true
+      countIncrementalSlides: false
+---
+layout: true
+
+<div class="my-footer"><span> OSW - Version Control    
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    @audhalbritter <a href="https://twitter.com/audhalbritter">`r shiny::icon("twitter")` </a>
+                    audhalbritter <a href="https://github.com/audhalbritter">`r shiny::icon("github-alt")` </a>
+                    </span></div> 
+                    
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(emo)
+library(tidyverse)
+library(kableExtra)
+```
+
+
+
+---
+
+# Exercise 3 from day 1
+
+<br></br>
+
+<center>
+
+<font size="6">If you were not here yesterday</font> 
+
+<center>
+
+<font size="6">Install this package</font> 
+
+`library(devtools)`
+
+`devtools::install_github("Open-Science-Workshop-UIB-BIO/OSW_Viserion_package")`
+
+<center>
+
+<font size="6">And CLONE this repo!</font> 
+
+
+`library(usethis)`
+
+`create_from_github("Open-Science-Workshop-UIB-BIO/OSW_Project_Exercise_A", fork = FALSE)`
+
+
+---
+
+# Angelina and Kingsley
+
+<center>
+
+<img src="pics/Angelina_and_Kingsley.png" height="500px">
+ 
+</center>
+
+
+---
+
+
+# What are branches?
+
+A **branch** lets you develop code, fix a problem in your code, or test an idea without affecting the original project.
+
+
+---
+
+
+# What are branches?
+
+A **branch** is created from an existing branch.
+Usually a branch is created from the **main** branch of the project.
+
+<center>
+
+<img src="pics/0_Branches.jpg" height="400px">
+ 
+</center>
+
+
+---
+
+
+# What are branches?
+
+You can work on a **branch**, bravely develop code that works or does not work and it does not break the code on the main branch. Basically, you can experiment on your own.
+
+<center>
+
+<img src="pics/1_Branches.jpg" height="400px">
+ 
+</center>
+
+
+---
+
+
+# What are branches?
+
+You can work on a **branch**, bravely develop code that works or does not work and it does not break the code on the main branch. Basically, you can experiment on your own.
+
+
+<center>
+
+<img src="pics/2_Branches.jpg" height="400px">
+ 
+</center>
+
+
+---
+
+
+# What are branches?
+
+If the idea did not work or you have another idea, the **branch** can be **deleted** and nobody ever needs to know about it. Make a new branch and start all over again. None of this will affect the original project.
+
+
+<center>
+
+<img src="pics/3_Branches.jpg" height="400px">
+ 
+</center>
+
+
+---
+
+
+# What are branches?
+
+If you are working on your own project, and happy with the new code, or the idea is tested and working, you can **merge** the **branch** you are working on with the main branch.
+
+
+<center>
+
+<img src="pics/4_Branches.jpg" height="400px">
+ 
+</center>
+
+
+---
+
+
+# Worklfow using branches
+
+<center>
+
+<img src="pics/0_workflow_branch.jpg" height="500px">
+ 
+</center>
+
+
+---
+
+
+# Worklfow using branches
+
+<center>
+
+<img src="pics/1_workflow_branch.jpg" height="500px">
+ 
+</center>
+
+
+---
+
+
+# Worklfow using branches
+
+<center>
+
+<img src="pics/2_workflow_branch.jpg" height="500px">
+ 
+</center>
+
+
+---
+
+
+# Worklfow using branches
+
+<center>
+
+<img src="pics/3_workflow_branch.jpg" height="500px">
+ 
+</center>
+
+
+---
+
+
+# Worklfow using branches
+
+<center>
+
+<img src="pics/4_workflow_branch.jpg" height="500px">
+ 
+</center>
+
+
+---
+
+
+# Worklfow using branches
+
+<center>
+
+<img src="pics/5_workflow_branch.jpg" height="500px">
+ 
+</center>
+
+
+---
+
+# Collaborating with branches
+
+Shared repository
+
+<center>
+
+<img src="pics/0_Collab.jpg" height="400px">
+ 
+</center>
+
+
+---
+
+# Collaborating with branches
+
+Shared repository
+
+<center>
+
+<img src="pics/1_Collab.jpg" height="400px">
+ 
+</center>
+
+
+---
+
+# Collaborating with branches
+
+Shared repository
+
+<center>
+
+<img src="pics/2_Collab.jpg" height="400px">
+ 
+</center>
+
+
+---
+
+
+# Collaborating with branches
+
+Shared repository
+
+<center>
+
+<img src="pics/0_Collab_Branches.jpg" height="400px">
+ 
+</center>
+
+
+---
+
+# Collaborating with branches
+
+Shared repository
+
+<center>
+
+<img src="pics/1_Collab_Branches.jpg" height="400px">
+ 
+</center>
+
+
+---
+
+# Make branch
+
+<center>
+
+<img src="pics/day2_ex1/0_make_branch.png" height="200px">
+ 
+</center>
+
+
+---
+
+# Name and create branch
+
+<center>
+
+<img src="pics/day2_ex1/1_name_branch.png" height="200px">
+ 
+</center>
+
+
+---
+
+# Add a file with fav HP character `r emo::ji("wizard")` 
+
+<center>
+
+<img src="pics/day2_ex1/2_add_file.png" height="200px">
+ 
+</center>
+
+Then commit the change and push to GitHub.
+
+
+---
+
+# Make pull request
+
+Go to GitHub and make pull request.
+
+<center>
+
+<img src="pics/day2_ex1/3_make_pull_request.png" height="200px">
+ 
+</center>
+
+
+---
+
+# Open pull request
+
+<center>
+
+<img src="pics/day2_ex1/4_open_pull_request.png" height="400px">
+ 
+</center>
+
+
+---
+
+# Merge pull request
+
+<center>
+
+<img src="pics/day2_ex1/5_merge_pull_request.png" height="200px">
+ 
+</center>
+
+
+---
+
+# Confirm merge
+
+<center>
+
+<img src="pics/day2_ex1/6_confirm_merge.png" height="200px">
+ 
+</center>
+
+
+---
+
+# Delete branches
+
+Go back to RStudio and delete the branch.
+
+<br></br>
+
+To delete a branch **locally** type in the terminal:
+
+`git branch -d kingsley_shacklebolt`
+
+<br></br>
+
+To delete the branch **remotely**, type:
+
+`git push origin --delete kingsley_shacklebolt`
+
+
+
+---
+
+# Exercise 1
+
+
+In **OSW_Project_Exercise_A** repo:
+
+
+<center>
+
+<font size="4">1. Make a branch and name it with your full name. E.g. kingsley_shacklebolt</font>
+
+<br></br>
+
+<font size="4">2. Add a new .R file to the E_Day2 folder and name your favourite HP_character</font>
+
+<br></br>
+
+<font size="4">3. Commit and push</font>
+
+<br></br>
+
+<font size="4">4. Make a pull request on GitHub</font>
+
+<br></br>
+
+<font size="4">5. Merge pull request and delete branch</font>
+
+</center>
+
+`git branch -d kingsley_shacklebolt`
+
+`git push origin --delete kingsley_shacklebolt`
+
+---
+
+# When things go wrong...
+
+
+<center>
+
+<img src="pics/2_Collab.jpg" height="400px">
+ 
+</center>
+
+
+---
+
+# Merge conflict `r emo::ji("poop")``r emo::ji("poop")``r emo::ji("poop")`
+
+
+A **merge conflict** can occur when you are changing the same line in one file differently, for example using two different branches.
+
+The goal is to **avoid such conflicts** and a good strategy for this is to commit often, work in small steps, push and pull regular.
+Merge conflicts can be avoided if you use separate branches for each file that you are creating or editing.
+
+But merge conflicts cannot always be avoided.
+
+
+---
+
+# Make a change
+
+<center>
+
+<img src="pics/merge-conflict/0_mc-1.png" height="500px">
+ 
+</center>
+
+
+---
+
+# Make a different change in the same place
+
+<center>
+
+<img src="pics/merge-conflict/1_mc-2.png" height="480px">
+ 
+</center>
+
+
+---
+
+# Commit the changes
+
+<center>
+
+<img src="pics/merge-conflict/2_commit.png" height="500px">
+ 
+</center>
+
+
+---
+
+# Multiple pull requests
+
+<center>
+
+<img src="pics/merge-conflict/3_pull_requests.png" height="200px">
+ 
+</center>
+
+
+---
+
+# Ups and here it is...`r emo::ji("poop")`
+
+<center>
+
+<img src="pics/merge-conflict/4_merge_conflict.png" height="200px">
+ 
+</center>
+
+
+---
+
+# Where is the conflict?
+
+<center>
+
+<img src="pics/merge-conflict/5_conflict.png" height="400px">
+ 
+</center>
+
+
+---
+
+# You can solve the conflict!
+
+<center>
+
+<img src="pics/merge-conflict/6_solve_conflict.png" height="400px">
+ 
+</center>
+
+
+---
+
+# And it is solved!`r emo::ji("party")`
+
+<center>
+
+<img src="pics/merge-conflict/7_solved.png" height="400px">
+ 
+</center>
+
+
+---
+
+# And now it can be merged
+
+<center>
+
+<img src="pics/merge-conflict/8_merge.png" height="200px">
+ 
+</center>
+
+
+---
+
+# Exercise 2
+
+
+In **OSW_Project_Exercise_A** repo:
+
+<center>
+
+<font size="4">1. Make a branch</font>
+
+<br></br>
+
+<font size="4">2. Fix the problem</font>
+
+<br></br>
+
+<font size="4">3. Commit and push</font>
+
+<br></br>
+
+<font size="4">4. Make a pull request on GitHub</font>
+
+<br></br>
+
+<font size="4">5. Merge pull request and delete branch</font>
+
+</center>
+
+
+---
+
+# Exercise 2
+
+
+In **OSW_Project_Exercise_A** repo:
+
+```{r group-work}
+
+tibble(group = c(1, 2, 3, 4, 5),
+       folder = c("R/01_Data_processing/", rep("R/02_Main_analysis/", 4)),
+       script = c("01_Prepare_datasets.R",
+                  "01_Species_richness.R",
+                  "02_Fit_models.R",
+                  "03_Check_models.R",
+                  "04_Make_figures.R")) %>% 
+  kbl()
+```
+
+
+
+---
+
+# Challenges when collab. with branches
+
+* only one repo to worry about
+
+* works for small teams that pull/push regularly
+
+BUT
+
+* Chances of having merge conflicts increases
+
+* As project complexity, team size or overlap among members increases a fork and pull approach is advisable.
+
+
+---
+
+
+# What is a fork?
+
+* GitHub is useful for developing your own code, but at some point you might want to **collaborate** with other people on a project. Or you might come across a GitHub repository that you want to use as a **starting point** for your own work. In both cases forks are the way to go.
+
+--
+
+* A fork is a **copy** of somebody’s GitHub repository. You can fork a repo and work independently of the original project. Or if you are collaborating with other people you can stay connected with the original repository via pull requests.
+
+--
+
+* However, you **cannot directly affect** (or damage) the original project, which is somewhat less scary, right?`r emo::ji("prank")`
+
+---
+
+
+# Collaborating using forks
+
+<center>
+
+<img src="pics/0_workflow_fork.jpg" height="500px">
+ 
+</center>
+
+
+---
+
+
+# Collaborating using forks
+
+<center>
+
+<img src="pics/1_workflow_fork.jpg" height="500px">
+ 
+</center>
+
+
+---
+
+
+# Collaborating using forks
+
+<center>
+
+<img src="pics/2_workflow_fork.jpg" height="500px">
+ 
+</center>
+
+
+---
+
+
+# Collaborating using forks
+
+<center>
+
+<img src="pics/3_workflow_fork.jpg" height="500px">
+ 
+</center>
+
+
+---
+
+
+# Collaborating using forks
+
+<center>
+
+<img src="pics/4_workflow_fork.jpg" height="500px">
+ 
+</center>
+
+
+---
+
+
+# Collaborating using forks
+
+<center>
+
+<img src="pics/5_workflow_fork.jpg" height="500px">
+ 
+</center>
+
+
+---
+
+
+# Collaborating using forks
+
+<center>
+
+<img src="pics/6_workflow_fork.jpg" height="500px">
+ 
+</center>
+
+
+---
+
+
+# Collaborating using forks
+
+<center>
+
+<img src="pics/7_workflow_fork.jpg" height="500px">
+ 
+</center>
+
+---
+
+
+# Collaborating using forks
+
+<center>
+
+<img src="pics/8_workflow_fork.jpg" height="500px">
+ 
+</center>
+
+
+---
+
+
+# Collaborating using forks
+
+<center>
+
+<img src="pics/9_workflow_fork.jpg" height="500px">
+ 
+</center>
+
+
+---
+
+# Exercise 3
+
+<br></br>
+
+<center>
+
+<font size="20">FORK AND CLONE this repo</font> 
+
+<br></br>
+
+Run this code in your console in RStudio:
+
+`library(usethis)`
+
+`create_from_github("Open-Science-Workshop-UIB-BIO/OSW_Project_Exercise_B", fork = TRUE)`
+
+
+
+---
+
+# Exercise 3
+
+
+In **OSW_Project_Exercise_B** repo:
+
+
+<center>
+
+<font size="4">1. Make a branch and name it with your full name. E.g. kingsley_shacklebolt</font>
+
+<br></br>
+
+<font size="4">2. Add a new .R file to the Participants folder and name your favourite GOT_character</font>
+
+<br></br>
+
+<font size="4">3. Commit and push</font>
+
+<br></br>
+
+<font size="4">4. Make a pull request on GitHub</font>
+
+<br></br>
+
+<font size="4">5. Wait for repo maintainer to accept pull request.</font>
+
+<br></br>
+
+<font size="4">6. Fetch changes from upstream.</font>
+
+</center>
+
+
+---
+
+# Pull request
+
+<center>
+
+<img src="pics/day2_ex3/0_pull_request.png" height="500px">
+ 
+</center>
+
+
+---
+
+# Repo owner needs to accept pull request
+
+<center>
+
+<img src="pics/day2_ex3/1_new_pull_request.png" height="500px">
+ 
+</center>
+
+
+---
+
+# Fetch changes from upstream
+
+<center>
+
+<img src="pics/day2_ex3/2_fetch_upstream.png" height="300px">
+ 
+</center>
+
+
+---
+
+# Fetch changes from upstream
+
+<center>
+
+<img src="pics/day2_ex3/3_fetch_upstream.png" height="500px">
+ 
+</center>
+
+
+---
+
+# Pull locally
+
+<center>
+
+<img src="pics/day2_ex3/4_pull.png" height="400px">
+ 
+</center>
+
+
+---
+
+# Bonus exercise
+
+<br></br>
+
+<center>
+
+<font size="15">FORK AND CLONE a colleagues repo</font> 
+
+<br></br>
+
+<center>
+
+<font size="15">make a pull request and use the review function</font> 
+
+
+
+---
+
+# Bonus exercise
+
+<center>
+
+<img src="pics/day2_ex3/5_review.png" height="400px">
+ 
+</center>
+
+
+---
+
+# Alternative workflow
+
+
+<center>
+
+<img src="pics/fork_ex/usethis-pr-flow.jpg" height="500px">
+ 
+</center>
+
+
+---
+
+# Alternative workflow
+
+Make a **branch**: `pr_init("branch-name")`
+
+Make your change, commit.
+
+**Push** to GitHub: `pr_push()`
+
+Opens automatically GitHub, make **pull request**.
+
+**Wait** for repo maintainer to accept pull request. Have some `r emo::ji("cake")` 
+
+**Fetch** changes from upstream and finish branch: `pr_finish()`
+
+
+---
+
+# Prevent from pushing to main
+
+We have already established that when you collaborate on a repo using a fork, **never change the main branch**.
+This can be difficult to remember, and there is a way to **prevent from committing to main** in the usethis package.
+
+Run this code in your console:
+
+
+``` {r prevent-main, echo=TRUE, eval=FALSE}
+usethis::use_git_hook(
+  hook = "pre-commit",
+  script = '#!/bin/sh
+  branch="$(git rev-parse --abbrev-ref HEAD)"
+  if [ "$branch" = "main" ]; then
+  echo "You cannot commit directly to main branch"
+  exit 1
+  fi'
+)
+```
+
+From now on if you are trying to commit changes to main it will give you a warning message.
+If this happens, make a new branch, commit the changes and push.
+
+
+---
+
+
+# Useful resources
+
+**Biostats** Git and GitHub tutorial
+https://biostats-r.github.io/biostats/github/index.html
+
+**Happy Git** provides instructions for how to getting started with Git, R and RStudio, explains the workflows and useful tips for when things go wrong.
+https://happygitwithr.com/ 
+
+The **Git flight rules** are an exhaustive ressource for what to do when things go wrong. https://github.com/k88hudson/git-flight-rules
+
+---
+
+# Contributors
+
+* Aud H. Halbritter
+* Ondřej Mottl
+* Richard J. Telford
