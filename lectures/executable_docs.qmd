@@ -1,0 +1,155 @@
+---
+title: "Executable documents"
+subtitle: "Quarto"
+author: "Aud H. Halbritter"
+format:
+  revealjs: 
+    self-contained: true
+    theme: simple
+    slide-number: true
+    #lib_dir: libs
+    logo: pics/quarto.png
+    footer: "Open, reproducible, and transparent science"
+execute: 
+  eval: false
+    
+---
+
+# The problem
+
+## Doing science
+
+![](pics/cut-paste.jpg)
+
+
+## Lack of reproducibility
+
+![](pics/cut-paste_2.jpg)
+
+## Executable documents
+
+Quarto lets you have code and text in the same document.
+
+If you change or update the data, code, or results, new figures, tables and text are automatically generated in the document.
+
+
+![](pics/rmarkdown_wizards.png)
+
+Credit: Allison Horst
+
+# Elements of a quarto file
+
+
+## YAML
+
+The YAML is metadata for the document that goes right at the top of the file between two sets of three dashes.
+
+``` yaml
+---
+title: "My Manuscript"
+format: html
+date: 2022-04-03
+---
+```
+
+- key:value pairs
+- define format, title, author, date
+- sensitive to white space
+
+
+
+
+## Output formats
+
+Quarto documents can be rendered in about 40 formats!
+html, docx and pdf are very common output formats.
+
+Producing an html file to view in a browser is one of the simplest formats, as no extra software needs installing.
+
+``` yaml
+---
+title: "My Manuscript"
+format: html
+---
+```
+
+
+## Text - source vs visual editor
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](pics/source-editor.png)
+
+:::
+
+::: {.column width="50%"}
+![](pics/visual-editor.png)
+:::
+
+::::
+
+## Text - syntax
+
++------------------------------+--------------------------------------------+
+| Markdown Syntax              | Output                                     |
++==============================+============================================+
+|     # Header 1               | # Header 1 {.unnumbered .heading-output}   |
++------------------------------+--------------------------------------------+
+|     ## Header 2              | ## Header 2 {.unnumbered .heading-output}  |
++------------------------------+--------------------------------------------+
+| \*italics\* and \*\*bold\*\* | *italics* and **bold**                     |
++------------------------------+--------------------------------------------+
+| superscript m\^2\^           | superscript m^2^                           |
++------------------------------+--------------------------------------------+
+| subscript CO\~2\~            | subscript CO~2~                            |
++------------------------------+--------------------------------------------+
+
+## Code blocks
+
+Code in a quarto document is contained in code blocks.
+
+This is a code block that reads in a trait dataset from Svalbard.
+
+```{r}
+#| echo: fenced
+#| label: data-import
+#| message: false
+traits <- read_delim(
+    file = "data/PFTC4_Svalbard_2018_ITEX_Traits.csv") 
+```
+
+
+
+## Inline code
+
+In addition to the output from code blocks, you can insert code directly into text. This lets you avoid copying and pasting numbers from the output. 
+
+Inline code is enclosed by back-ticks and starts with an r.
+
+```{r}
+#| echo: false
+#| eval: true
+#| results: asis
+cat("``` markdown\n")
+cat("Seven times six is `r 7 * 6`")
+cat("\n```")
+```
+
+In the output this would look like:
+
+::: bg-success
+Seven times six is `r 7 * 6`
+:::
+
+
+## Exercise
+
+Go to the BioStats book on [reproducible documents](https://biostats-r.github.io/biostats/quarto/)
+
+And work through chapter 1-4.
+
+If you want more, have a look at the [quarto book](https://quarto.org/docs/computations/r.html)
+
+
+

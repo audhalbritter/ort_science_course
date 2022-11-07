@@ -3,12 +3,10 @@ title: "Data creation"
 subtitle: "Collection, spreadsheet design and digitizing"
 author: "Aud Halbritter and Joe Chipperfield"
 format:
-  revealjs: 
+  revealjs:
+    self-contained: true
     theme: simple
     slide-number: true
-    chalkboard: 
-      buttons: false
-    #css: styles.css
 ---
 
 ## Introduction
