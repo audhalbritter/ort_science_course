@@ -1,0 +1,292 @@
+---
+title: "Reproducible workflows with targets"
+subtitle: "Pipeline tool for data science in R"
+author: "Aud Halbritter"
+format:
+  revealjs:
+    self-contained: true
+    theme: simple
+    slide-number: true
+    logo: pics/targets.png
+    footer: "Open, reproducible, and transparent science course"
+---
+
+
+# The problem?
+
+
+## The workflow of data science
+
+Data analysis workflow with dependencies and multiple outcomes.
+
+![](pics/workflow.png)
+
+## Updating the workflow
+
+Change in one component requires updates to part or the whole workflow.
+
+![](pics/workflow_update.png)
+
+
+
+# The solution
+
+## The targets package
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+
+- Pipeline tool for statistics and data science in R
+
+- Reproducible workflows avoiding repetition
+
+- Skips costly running time for up to date tasks
+
+:::
+
+::: {.column width="30%"}
+![](pics/targets.png)
+:::
+
+::::
+
+
+
+
+
+## When is targets useful?
+
+- Code has long runtimes (slow or complex)
+
+- Interconnected tasks with dependencies
+
+- Different outputs (e.g. presentation and report)
+
+
+
+# How does it work?
+
+## File structure
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+- Code
+
+  - Functions
+
+- _target.R file
+
+- Data
+
+- make.R file
+
+- Manuscript
+
+
+:::
+
+::: {.column width="60%"}
+![](pics/file_structure.png)
+
+:::
+
+::::
+
+## _target.R script file
+
+The targets file configures and defines the pipeline.
+
+- load packages (targets ++)
+
+- source functions
+
+
+```{r}
+#| label: pipeline-1
+#| echo: true
+#| eval: false
+
+library(targets)
+tar_option_set(packages = c("readr", "dplyr", "ggplot2"))
+
+source("R/functions.R")
+
+```
+
+The `use_targets()` function can set up the targets file.
+
+
+## targets objects
+
+- list of target objects (data, result, figure)
+
+- create target objects with `tar_target()`
+
+
+```{r}
+#| label: pipeline-2
+#| echo: true
+#| eval: false
+
+list(
+  
+# Bootstrapping
+  tar_target(
+    name = trait_mean,
+    command = make_bootstrapping(community, traits)
+  ),
+  # make figure
+  tar_target(
+    name = trait_mean_figure,
+    command = make_trait_mean_figure(trait_results, trait_mean)
+  )
+  
+  ...
+)
+
+```
+
+
+## The output
+
+
+```{r}
+#| label: quarto-file
+#| echo: true
+#| eval: false
+
+list(
+
+  ...
+  
+# render ms
+manuscript_plan <- list(tar_render(name = ms, path = "manuscript/manuscript.qmd"))
+)
+
+```
+
+Each target is a step of the analysis and will be stored as a value in the _targets/objects/
+
+
+
+## manuscript.qmd file
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+``` yaml
+---
+title: "Plant functional traitresponses to climate warming in an Arctic environment on Svalbard"
+author: Aud Halbritter and PFTC4 consortium
+format: html
+bibliography: bibliography.bib
+editor: 
+  markdown: 
+    wrap: sentence
+---
+```
+
+
+:::
+
+::: {.column width="50%"}
+![](pics/ms_output.png)
+
+:::
+
+::::
+
+
+## Run the pipeline
+
+Separate make.R file:
+
+```{r}
+#| label: run-pipeline
+#| echo: true
+#| eval: false
+
+###############################
+#### Make targets ####
+###############################
+
+library("targets")
+
+# make the targets that are out of date
+# looks for a file called "_targets.R" in the working directory
+tar_make()
+
+```
+
+
+
+
+## Inspect the pipeline
+
+Use `tar_manifest(fields = all_of("command"))` to check for errors.
+
+And `tar_visnetwork()` to visualise the dependency graph.
+
+![](pics/visnetwork.png)
+
+## Start small
+
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+
+- Start small and build on it.
+
+- Add small steps, one at the time, check and add the next step.
+
+:::
+
+::: {.column width="60%"}
+![](pics/complex_workflow.png)
+
+:::
+
+::::
+
+
+## Exercise
+
+Download this template repository.
+
+- get it running
+
+- do changes to it
+
+
+```{r}
+#| label: exercise
+#| echo: true
+#| eval: false
+
+library(usethis)
+
+use_course("biostats-r/targets_workflow_svalbard")
+
+```
+
+
+## Further reading / watching
+
+- [GitHub](https://github.com/ropensci/targets) page
+
+- Targets [user manual](https://books.ropensci.org/targets/)
+
+- Targets workflow examples
+  
+  - [Minimal example](https://github.com/wlandau/targets-minimal)
+  
+  - [Larger example](https://github.com/richardjtelford/neotomaTargets)
+
