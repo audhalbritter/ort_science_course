@@ -7,6 +7,8 @@ format:
     self-contained: true
     theme: simple
     slide-number: true
+    logo: pics/lupe.jpg
+    footer: "Open, reproducible, and transparent science course"
 ---
 
 ## Introduction
