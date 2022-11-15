@@ -31,9 +31,7 @@ format:
 
 | Time  | Task  |
 |:---|:---|
-| 5 min  | Introduction  |
-| 15 min  | Design method  |
-| 10 min  | Discuss your decisions  |
+| 30 min  | Data collection - desing method  |
 | 30 min  | Go outside and collect data  |
 | 30 min  | Discussion on data collection and digitizing  |
 
@@ -68,7 +66,7 @@ format:
 ## Discussion: collect data (10 min)
 
 - What decisions did you make?
-- How would you improve the data collection if you could?
+- What are the cons and pros of your method?
 
 
 ## Exercise: collect your data (30 min)
@@ -82,7 +80,7 @@ format:
 
 - How did it go?
 
-- was the method appropriate?
+- Was the method appropriate?
 
 - Did you miss any information?
 
