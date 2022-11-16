@@ -111,9 +111,10 @@ The targets file configures and defines the pipeline.
 #| eval: false
 
 library(targets)
+library(tarchetypes)
 tar_option_set(packages = c("readr", "dplyr", "ggplot2"))
 
-source("R/functions.R")
+source("R/Functions/bootstrapping.R")
 
 ```
 
@@ -164,12 +165,12 @@ list(
   ...
   
 # render ms
-manuscript_plan <- list(tar_render(name = ms, path = "manuscript/manuscript.qmd"))
+tar_render(name = ms, path = "manuscript/manuscript.qmd")
 )
 
 ```
 
-Each target is a step of the analysis and will be stored as a value in the _targets/objects/
+Each target is a step of the workflow and will be stored as a value in the _targets/objects/
 
 
 
@@ -261,11 +262,6 @@ And `tar_visnetwork()` to visualise the dependency graph.
 
 Download this template repository.
 
-- get it running
-
-- do changes to it
-
-
 ```{r}
 #| label: exercise
 #| echo: true
@@ -276,6 +272,10 @@ library(usethis)
 use_course("biostats-r/targets_workflow_svalbard")
 
 ```
+
+- get it running (run make file)
+
+- changes it (add new fig, calculation, analysis, change output file)
 
 
 ## Further reading / watching
