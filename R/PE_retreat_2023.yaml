@@ -7,18 +7,18 @@ rstudio:
   options:
     save_workspace:
       value: never
-      message: Menu tools > Global options > General
+      message: Never save the workspace. To improve reproducibility, always start with a clean sheet. To change this go to Tools > Global Options > General and change Save workspace to .RData on exit to never.
     load_workspace:
       value: FALSE
-      message: Set load workspace to FALSE to improve reproducibility. Menu tools > Global options > General
+      message: Set load workspace to FALSE to improve reproducibility. Go to Tools > Global Options > General and untick the box Restore .RData into workspace at startup.
     rainbow_parentheses:
       value: TRUE
-      message: Rainbow parentheses make it easier to spot missing parentheses. Menu tools > Global options > Code > Display
+      message: Rainbow parentheses make it easier to spot missing parentheses. Go to Tools > Global Options > Code > Display and tick box Use rainbow paranthesis.
     soft_wrap_r_files:
       value: TRUE
-      message: Soft wrap files so you don't need to scroll sideways. Menu tools > Global options > Code > Editing
+      message: Soft wrap files so you don't need to scroll sideways. Go to Tools > Global Options > Code > Editing and tick box Softwrap R source files.
     insert_native_pipe_operator:
       value: TRUE
-      message: Use the native pipe operator '|>'. Menu tools > Global options > Code > Editing
+      message: Use the native pipe operator '|>'. Go to Tools > Global Options > Code > Editing and tick box Use native pipe operator.
 git: NA
 ---
