@@ -30,6 +30,6 @@ rstudio:
       value: TRUE
       message: Use the native pipe operator '|>'. Menu tools > Global options > Code > Editing
 quarto:
-  recommended: 1.6.32
+  recommended: 1.5.57
 git: NA
 ---
