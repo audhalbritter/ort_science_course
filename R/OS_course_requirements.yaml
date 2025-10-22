@@ -13,6 +13,8 @@ packages:
   csmaps: NA
   sf: NA
   devtools: NA
+  metafor: NA
+  orchaRd: NA
 rstudio:
   recommended: 2024.09.0
   options:
