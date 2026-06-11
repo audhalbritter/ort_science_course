@@ -10,7 +10,11 @@ packages:
   targets: NA
   usethis: NA
   rgbif: NA
-  LivingNorwayR: NA
+  csmaps: NA
+  sf: NA
+  devtools: NA
+  metafor: NA
+  orchaRd: NA
 rstudio:
   recommended: 2024.09.0
   options:
@@ -30,6 +34,6 @@ rstudio:
       value: TRUE
       message: Use the native pipe operator '|>'. Menu tools > Global options > Code > Editing
 quarto:
-  recommended: 1.6.32
+  recommended: 1.8.25
 git: NA
 ---
